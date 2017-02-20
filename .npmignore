@@ -1,0 +1,9 @@
+/__test__
+/node_modules
+/src
+/tools
+/.gitignore
+/Gruntfile.js
+/mocha.opts
+/tsconfig.json
+/.idea
