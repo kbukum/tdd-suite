@@ -1,50 +1,17 @@
-import PropsClass from "../lang/PropClass";
-import Constants from "../Constants";
-var electron = require('electron');
-var {app, BrowserWindow, ipcMain} = electron;
+import Window, { WindowProps } from "./Window";
+import {Url} from "url";
+import BrowserWindow = Electron.BrowserWindow;
 
-export interface BrowserProps {
-    url: {
-        protocol?: "file" | "http" | "https"
-        slashes?: boolean
-        pathname: string
-    },
-    width: number
-    height: number,
-    events: {
-        [key: string]: (event, arg) => any
-    }
+export interface BrowserProps extends WindowProps {
+    onDestroy();
 }
 
-export default class Browser extends PropsClass {
-    props;
-    static defaultProps = {
-        url: {
-            protocol: "file",
-            slashes: true
-        }
-    };
-    private mainWindow;
-    constructor(props: BrowserProps) {
+export default class Browser extends Window {
+    public constructor(props: BrowserProps) {
         super(props);
     }
-    openBrowser(){
-        let {url, events, ...windowProps } = this.props;
 
-        let urlString = url.pathname.match(Constants.urlPattern) ? url.pathname: require('url').format(url);
-        this.mainWindow = new BrowserWindow(windowProps);
-        this.mainWindow.loadURL(urlString);
-        this.mainWindow.openDevTools();
-        if(events) {
-            for(let key in events) {
-                if(events.hasOwnProperty(key)) {
-                    ipcMain.on(key, events[key]);
-                }
-            }
-        }
-    }
-
-    getMainWindow(){
-        return this.mainWindow;
+    destroy(){
+        this.window.close();
     }
 }

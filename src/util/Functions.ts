@@ -8,7 +8,7 @@ const hasValue = (value): boolean => {
     return value !== null && typeof value !== "undefined";
 };
 
-const requireMain = (id: string) => {
+const requireEs6 = (id: string) => {
     let module = require(id);
     if(module.__esModule) {
         if(module.default) {
@@ -36,5 +36,5 @@ const requireMain = (id: string) => {
 export {
     getType,
     hasValue,
-    requireMain
+    requireEs6
 }

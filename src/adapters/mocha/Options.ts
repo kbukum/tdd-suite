@@ -1,10 +1,11 @@
-import ArgsParser from "../../util/ArgsParser";
-import * as fs from "fs-extra";
-import { resolve } from "path";
 const packageJson = require("../../../package.json");
+const fs = require('fs');
+const { join, resolve } = require('path');
+const program = require('commander');
+const cwd = process.cwd();
 
 const list = (str) => {
-    return str.split(/ *, */)
+    return str.split(/ *, */);
 };
 
 const modules = (mod, memo) => {
@@ -39,38 +40,32 @@ const config = [
     ['--recursive', 'include sub directories'],
     ['--renderer', 'run tests in renderer process'],
     ['--preload <name>', 'preload the given script in renderer process', modules, []],
-    ['--require-main <name>', 'load the given script in main process before executing tests', modules, []]
+    ['--require-main <name>', 'load the given script in main process before executing tests', modules, []],
 ];
 
-export interface OptionsProps {
-    baseUrl: string,
-    controllerPath: string,
-    framework: string
-}
-
 export default class Options {
-    static parse(args: string[]): OptionsProps {
-        let props = {
-            options: {}
-        };
-        let options = ArgsParser.parse(
-            packageJson.name,
-            packageJson.version,
-            config,
-            args,
-            true
-        );
-        options.files = options.args
+    static argsToProps(argv: string[]) {
+        program._name = packageJson.name;
+        program
+            .version(packageJson.version)
+            .usage('[options] [files]');
+        for(let i = 0 ; i < config.length; i++) {
+            program.option.apply(program, config[i]);
+        }
+        (module as any).paths.push(cwd, join(cwd, 'node_modules'));
+        program.parse(argv);
+        const argData = JSON.parse(JSON.stringify(program));
+        argData.files = argData.args;
 
-        if (options.debugBrk) {
-            options.debug = true
+        if (argData.debugBrk) {
+            argData.debug = true
         }
 
         // delete unused
         ['commands', 'options', '_execs', '_args', '_name', '_events', '_usage', '_version', '_eventsCount', 'args'].forEach(function (key) {
-            delete options[key]
+            delete argData[key]
         });
-
-        return options
+        return argData
     }
 }
+

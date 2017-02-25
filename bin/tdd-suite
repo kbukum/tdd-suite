@@ -1,10 +1,10 @@
 #!/usr/bin/env node
+const path = require("path");
 const package = require("../package.json");
-
 const electron = require("electron/index.js");
 const proc = require("child_process");
 
-const argv = [package.main].concat(process.argv.slice(2));
+const argv = [path.resolve(path.dirname(__dirname), package.main)].concat(process.argv.slice(2));
 const child = proc.spawn(electron, argv , {stdio: "inherit"});
 child.on("close", function (code) {
     process.exit(code);

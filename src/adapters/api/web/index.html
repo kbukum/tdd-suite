@@ -1,8 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <script src="./Renderer.js">
-
+    <script>
+        const Adapter = require("./WebAdapter").default;
+        const adapter = new Adapter();
+        window.onload = () => {
+            adapter.onFinishLoad();
+        }
     </script>
 </head>
 <body>
@@ -12,5 +16,6 @@
   in debug/interactive mode).
   In interactive mode, reload the window to re-run your tests!
 -->
+
 </body>
 </html>

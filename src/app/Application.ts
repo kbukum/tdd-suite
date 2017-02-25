@@ -1,58 +1,107 @@
+import {join} from "path";
 import * as fs from "fs-extra";
-import { join } from "path";
+const { app, ipcMain: ipc } = require("electron");
+import Class from "../lang/Class";
 import Browser from "./Browser";
-import PropsClass from "../lang/PropClass";
-import {OptionsProps} from "./Options";
-import {Controller, ControllerClass} from "./Controller";
-import { requireMain } from "../util/Functions";
-const electron = require('electron');
-const {app} = electron;
+
 
 export interface ApplicationProps {
-    options: OptionsProps,
-    args: string[]
+    name: string,
+    renderer: boolean,
+    interactive: boolean,
+    indexUrl: string,
+    debug: boolean,
+    version: string,
+    onDeveloperToolsOpened?: () => void
 }
 
-export default class Application extends PropsClass {
-    private tmpDir;
-    controller: Controller;
-    static defaultProps = {
-    };
-    private browser;
+export default class Application extends Class {
+    props;
+    tmpDir;
+    browser: Browser;
+
     constructor(props: ApplicationProps) {
-        super(props);
-        let Controller: ControllerClass = requireMain(props.options.controllerPath);
-        let { options, args } = this.props;
-        this.controller = new Controller({
-            options,
-            args,
-            quit: app.quit
+        super();
+        this.props = props;
+    }
+
+    public run(){
+        this.createTempDir();
+        // TODO on ready to start
+        if(this.props.renderer) {
+            app.on("quit", this.onDestroy);
+            app.on("ready", this.onReadyToStart);
+            app.on('window-all-closed', this.destroy)
+        } else {
+            this.props.run();
+            // this.adapter.start();
+            return;
+        }
+    }
+
+    public onReadyToStart() {
+        // TODO if renderer is ok then browser will open
+        try {
+            this.browser = new Browser({
+                window: {
+                    width: 800,
+                    height:800,
+                    show: false,
+                    focusable: this.props.interactive || this.props.debug,
+                    webPreferences: {
+                        webSecurity: false
+                    }
+                },
+                onShown: this.onShown,
+                onDestroy: this.onDestroy
+            });
+            this.browser.open({
+                protocol: "file",
+                slashes: true,
+                pathname: this.props.indexUrl
+            });
+            /*
+            if (!(this.props.interactive || this.props.debug) && process.platform === "darwin") {
+                app.dock.hide()
+            }
+            */
+        } catch (e) {
+            console.error(e);
+            this.destroy();
+        }
+        // TODO else just need to call Runner
+    }
+
+    public onDestroy(){
+
+    }
+    public destroy(){
+        this.browser.destroy();
+        this.removeTempDir();
+        app.quit();
+    }
+
+    private createTempDir() {
+        this.tmpDir = fs.mkdtempSync(join(app.getPath("temp"), this.props.name));
+        app.setPath("userData", this.tmpDir);
+    }
+
+    private onShown() {
+        this.browser.openDeveloperTools((window) => {
+            if(this.props.onDeveloperToolsOpened) {
+                this.props.onDeveloperToolsOpened(this);
+            }
         });
     }
-    run(){
-        this.tmpDir = fs.mkdtempSync(join(app.getPath('temp'), 'tdd-suite-'));
-        app.setPath('userData', this.tmpDir);
-        app.on('window-all-closed', this.onClosed);
-        app.on('quit', this.onQuit);
-        app.on('ready', this.onReady);
+
+    private removeTempDir(){
+        if(this.tmpDir) {
+            fs.removeSync(this.tmpDir);
+            this.tmpDir = null;
+        }
     }
 
-    onClosed() {
-        // do not quit if tests open and close windows
-
-    }
-
-    onQuit(){
-        fs.removeSync(this.tmpDir);
-    }
-
-    onReady(){
-        this.browser = new Browser({
-            width: 800,
-            height: 800,
-            url: this.controller.getUrl(),
-            events: this.controller.events()
-        });
-        this.browser.openBrowser();
+    getProps(): ApplicationProps {
+        return this.props;
     }
 }
