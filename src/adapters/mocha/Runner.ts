@@ -22,6 +22,7 @@ export default class Runner extends Class {
         };
         return args;
     }
+
     run(callback){
         let args = this.props.options;
         const utils = Mocha.utils;

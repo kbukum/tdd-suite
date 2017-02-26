@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node ./bin/tdd-suite --opts mocha.opts",
-    "test": "node ./bin/tdd-suite --opts mocha.opts",
+    "test": "node ./bin/tdd-suite --opts mocha.opts --root-list src",
     "testn": "node ./bin/tdd-suite --opts mocha.opts",
     "testi": "node ./bin/tdd-suite --opts mocha.opts",
     "build": "node tools/command/build",

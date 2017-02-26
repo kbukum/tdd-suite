@@ -12,3 +12,12 @@ You can tests on existing adapter like Mocha or you can write new adapter to tes
     
 #### Add Custom Adapters.
 
+
+#### Mocha Test
+
+* NodeJS Test on Mocha Adapter
+```ssh
+    node ./node_modules/tdd-suite/bin/tdd-suite --opts mocha.opts --root-list src
+```
+
+

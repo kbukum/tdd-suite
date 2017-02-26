@@ -7,7 +7,7 @@ export default class Arrays {
      * @return {boolean}
      */
     public static has(items: any[]): boolean {
-        return items && items.length > 0
+        return items !== undefined && items !== null && items.length > 0
     }
     public static cleanValueFromArray(src: any[], value: any) {
         for (let i = 0; i < src.length; i++) {

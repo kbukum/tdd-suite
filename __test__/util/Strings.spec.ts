@@ -1,16 +1,13 @@
 import Strings from "util/Strings";
 import { expect } from "chai";
+
 describe("util/Strings", () => {
 
     it("has", () => {
-        expect(Strings.has("")).eq(false);
-        expect(Strings.has(null)).eq(false);
-        expect(Strings.has(undefined)).eq(false);
-        expect(Strings.has("Example")).eq(true);
-        for(let i = 0 ; i < 1000000; i++) {
-            i++;
-            expect(i).gt(0);
-        }
+        expect(Strings.has("")).to.be.false;
+        expect(Strings.has(null)).to.be.false;
+        expect(Strings.has(undefined)).to.be.false;
+        expect(Strings.has("Example")).to.be.true;
     });
 
     it("startsWith", () => {

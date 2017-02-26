@@ -1,6 +1,6 @@
 const startIndex: number = "[object ".length;
-const getType = (command): string => {
-    let type = Object.prototype.toString.call(command);
+const getType = (value): string => {
+    let type = Object.prototype.toString.call(value);
     return type.substring(startIndex, type.length - 1);
 };
 
