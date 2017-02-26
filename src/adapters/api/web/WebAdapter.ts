@@ -47,32 +47,22 @@ export default class WebRunner extends Class {
     }
 
     public onMainConfirmStart(event, result) {
-        this.start(this.onSuccess, this.onError);
+        this.start(this.onSuccess);
     }
 
-    public start(onSuccess, onError) {
+    public start(onCompleted) {
         try {
-            this.run((err)=> {
-                if(err) {
-                    onError(err);
-                } else {
-                    onSuccess();
-                }
-            });
-            this.onSuccess();
+            this.run(onCompleted);
         } catch (e) {
             this.onError(e);
         }
     }
 
-    public onSuccess() {
-        ipcRenderer.send("onRenderedCompleted", true);
-    }
-    public onError(error){
-        ipcRenderer.send("onRenderedCompleted", error);
+    public onSuccess(count) {
+        ipcRenderer.send("onRenderedCompleted", count);
     }
 
-    public static onMainError(event, result) {
-        console.log(result);
+    public onError(result) {
+        ipcRenderer.send("onRenderedCompleted", error);
     }
 }

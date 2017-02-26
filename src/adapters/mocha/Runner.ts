@@ -53,7 +53,6 @@ export default class Runner extends Class {
 
         args.compilers.forEach((compilers) => {
             let [ext, mod] = compilers.split(':');
-
             if (mod[0] === '.') mod = join(process.cwd(), mod);
             require(mod);
             extensions.push(ext)
@@ -65,9 +64,11 @@ export default class Runner extends Class {
         if (args.sort) {
             files.sort()
         }
+        mocha.asyncOnly = false;
         mocha.files = files;
-        this.mocha.run(callback);
+        mocha.run(callback);
     }
+
     static complete(){
         ipcRenderer.send("onCompleted", 0);
     }

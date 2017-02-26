@@ -16,14 +16,14 @@ const Adapter: any = requireEs6(opts.options.adapterClass);
 if(!opts.options.renderer) {
     new Adapter({
         ...opts,
-        quit: () => process.exit(1)
+        quit: (count) => process.exit(count)
     }).run();
 } else {
     new Adapter({
         ...opts,
-        quit: () => {
+        quit: (count) => {
             application.destroy();
-            process.exit(1);
+            process.exit(count);
         }
     });
     let application = new Application({

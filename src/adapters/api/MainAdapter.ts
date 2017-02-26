@@ -36,7 +36,7 @@ export default class MainAdapter extends Class implements Adapter {
         let me = this;
         let props = Objects.clone(this.props);
         const nodeRunner = new this.runner(props);
-        nodeRunner.run(() => {
+        nodeRunner.run((count) => {
             /*
             if(me.props.options.interactive) {
                 prompt.get(properties, function (err, result) {
@@ -54,7 +54,7 @@ export default class MainAdapter extends Class implements Adapter {
                 me.props.quit();
             }
             */
-            me.props.quit();
+            me.props.quit(count);
         });
     }
 
@@ -66,15 +66,20 @@ export default class MainAdapter extends Class implements Adapter {
     }
     onRenderedCompleted(event, arg) {
         if(MainAdapter.isSuccess(arg)) {
-            // TODO Its is success completed.
-            if(!this.props.options.interactive) {
-                // this.props.quit();
-            }
+            this.quit(arg);
         } else {
-            console.error(error);
+            console.error(arg.message);
+            console.error(arg.stack);
+            arg = 1;
+        }
+        this.quit(arg);
+    }
+    quit(result){
+        if(!this.props.options.interactive) {
+            this.props.quit(result);
         }
     }
     static isSuccess(arg) {
-        return arg === true;
+        return arg === true || parseInt(arg) == arg;
     }
 }
