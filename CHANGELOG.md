@@ -1,16 +1,11 @@
-# Change Log
+## CHANGE LOG
 
-## 1.0.1 -- Developing...
-* Added Tests
-    - **lang/Class.spec.ts**
-    - **lang/index.spec.ts**
-    - **lang/Type.spec.ts**
-    - **util/Arrays.spec.ts**
-    - **util/Assertions.spec.ts**
-    - **util/CommandHelper.spec.ts**
-    - **util/Files.spec.ts**
-    - **util/Functions.spec.ts**
-    - **util/Objects.spec.ts**
-    - **util/Resolver.spec.ts**
-    - **util/Strings.spec.ts**
-    - **util/Types.spec.ts**
+#### v1.0.1-alpha.1 Developing ...
+* changed all structure of the project.
+* use (typescript-skeleton-library)[https://github.com/wasabi-io/ts-library-skeleton] structure.
+* added wasabi-common library to use for common operations.
+* added (command-helper)[https://github.com/wasabi-io/command-helper] to parse command by your own.
+
+#### v1.0.0
+* create skeleton typescript library as initial project.
+* added docs and comments to **app/App** class.
