@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_util_browser_.html">&quot;util/Browser&quot;</a>
+					<a href="../modules/_renderer_electron_browser_.html">&quot;renderer/electron/Browser&quot;</a>
 				</li>
 				<li>
-					<a href="_util_browser_.browserprops.html">BrowserProps</a>
+					<a href="_renderer_electron_browser_.browserprops.html">BrowserProps</a>
 				</li>
 			</ul>
 			<h1>Interface BrowserProps</h1>
@@ -73,7 +73,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BrowserProps</span>
+						<a href="_renderer_electron_window_.windowprops.html" class="tsd-signature-type">WindowProps</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">BrowserProps</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -81,102 +86,131 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_util_browser_.browserprops.html#events" class="tsd-kind-icon">events</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_util_browser_.browserprops.html#height" class="tsd-kind-icon">height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_util_browser_.browserprops.html#url" class="tsd-kind-icon">url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_util_browser_.browserprops.html#width" class="tsd-kind-icon">width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_renderer_electron_browser_.browserprops.html#onfinishload" class="tsd-kind-icon">on<wbr>Finish<wbr>Load</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_renderer_electron_browser_.browserprops.html#onshown" class="tsd-kind-icon">on<wbr>Shown</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_renderer_electron_browser_.browserprops.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_renderer_electron_browser_.browserprops.html#window" class="tsd-kind-icon">window</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_renderer_electron_browser_.browserprops.html#ondestroy" class="tsd-kind-icon">on<wbr>Destroy</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="events" class="tsd-anchor"></a>
-					<h3>events</h3>
-					<div class="tsd-signature tsd-kind-icon">events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="onfinishload" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Finish<wbr>Load</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Finish<wbr>Load<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_renderer_electron_window_.windowprops.html">WindowProps</a>.<a href="_renderer_electron_window_.windowprops.html#onfinishload">onFinishLoad</a></p>
 						<ul>
-							<li>Defined in util/Browser.ts:15</li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/Window.ts#L11">renderer/electron/Window.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">function</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-siganture">
-										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>event: <span class="tsd-signature-type">any</span></h5>
-													</li>
-													<li>
-														<h5>arg: <span class="tsd-signature-type">any</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>window<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>window: <span class="tsd-signature-type">any</span></h5>
 											</li>
 										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="height" class="tsd-anchor"></a>
-					<h3>height</h3>
-					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="onshown" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Shown</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Shown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_renderer_electron_window_.windowprops.html">WindowProps</a>.<a href="_renderer_electron_window_.windowprops.html#onshown">onShown</a></p>
 						<ul>
-							<li>Defined in util/Browser.ts:14</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="url" class="tsd-anchor"></a>
-					<h3>url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in util/Browser.ts:8</li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/Window.ts#L12">renderer/electron/Window.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>pathname<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> protocol<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"file"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"http"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"https"</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> slashes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>window<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>window: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="width" class="tsd-anchor"></a>
-					<h3>width</h3>
-					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="parent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parent</h3>
+					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_renderer_electron_window_.windowprops.html">WindowProps</a>.<a href="_renderer_electron_window_.windowprops.html#parent">parent</a></p>
 						<ul>
-							<li>Defined in util/Browser.ts:13</li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/Window.ts#L13">renderer/electron/Window.ts:13</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="window" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> window</h3>
+					<div class="tsd-signature tsd-kind-icon">window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BrowserWindowOptions</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_renderer_electron_window_.windowprops.html">WindowProps</a>.<a href="_renderer_electron_window_.windowprops.html#window">window</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/Window.ts#L10">renderer/electron/Window.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ondestroy" class="tsd-anchor"></a>
+					<h3>on<wbr>Destroy</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Destroy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/Browser.ts#L5">renderer/electron/Browser.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -186,82 +220,40 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_constants_.html">"<wbr>Constants"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_options_.html">"adapters/mocha/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_renderer_.html">"adapters/mocha/<wbr>Renderer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_console_.html">"adapters/mocha/console"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_index_.html">"adapters/mocha/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_mocha_.html">"adapters/mocha/mocha"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_application_.html">"app/<wbr>Application"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_controller_.html">"app/<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_options_.html">"app/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_argsparser_.html">"util/<wbr>Args<wbr>Parser"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_util_browser_.html">"util/<wbr>Browser"</a>
+						<a href="../modules/_renderer_electron_browser_.html">"renderer/electron/<wbr>Browser"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_util_browser_.browser.html" class="tsd-kind-icon">Browser</a>
+						<a href="../classes/_renderer_electron_browser_.browser.html" class="tsd-kind-icon">Browser</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_util_browser_.browserprops.html" class="tsd-kind-icon">Browser<wbr>Props</a>
+						<a href="_renderer_electron_browser_.browserprops.html" class="tsd-kind-icon">Browser<wbr>Props</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_util_browser_.browserprops.html#events" class="tsd-kind-icon">events</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_renderer_electron_browser_.browserprops.html#onfinishload" class="tsd-kind-icon">on<wbr>Finish<wbr>Load</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_util_browser_.browserprops.html#height" class="tsd-kind-icon">height</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_renderer_electron_browser_.browserprops.html#onshown" class="tsd-kind-icon">on<wbr>Shown</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_util_browser_.browserprops.html#url" class="tsd-kind-icon">url</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_renderer_electron_browser_.browserprops.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_util_browser_.browserprops.html#width" class="tsd-kind-icon">width</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_renderer_electron_browser_.browserprops.html#window" class="tsd-kind-icon">window</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_renderer_electron_browser_.browserprops.html#ondestroy" class="tsd-kind-icon">on<wbr>Destroy</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#browserwindow" class="tsd-kind-icon">Browser<wbr>Window</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#app" class="tsd-kind-icon">app</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#electron" class="tsd-kind-icon">electron</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#ipcmain" class="tsd-kind-icon">ipc<wbr>Main</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

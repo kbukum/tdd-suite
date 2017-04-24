@@ -85,9 +85,15 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#adapterpath" class="tsd-kind-icon">adapter<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#backendrenderer" class="tsd-kind-icon">backend<wbr>Renderer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#electronrendererpath" class="tsd-kind-icon">electron<wbr>Renderer<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#framework" class="tsd-kind-icon">framework</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#indexurl" class="tsd-kind-icon">index<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#modulepath" class="tsd-kind-icon">module<wbr>Path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#tddconfig" class="tsd-kind-icon">tdd<wbr>Config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#noderendererpath" class="tsd-kind-icon">node<wbr>Renderer<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#rendererpath" class="tsd-kind-icon">renderer<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#tmpname" class="tsd-kind-icon">tmp<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_constants_.constants.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a></li>
 							</ul>
 						</section>
@@ -99,10 +105,40 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="adapterpath" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> adapter<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">adapter<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"lib/adapters"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;lib/adapters&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">adapter<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.modulePath, &quot;adapter&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/Constants.ts#L6">Constants.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L9">Constants.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="backendrenderer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> backend<wbr>Renderer</h3>
+					<div class="tsd-signature tsd-kind-icon">backend<wbr>Renderer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.electronRendererPath, &quot;Backend&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L14">Constants.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="baseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> base<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;dirname(Constants.modulePath)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L7">Constants.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="electronrendererpath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> electron<wbr>Renderer<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">electron<wbr>Renderer<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.rendererPath, &quot;electron&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L11">Constants.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -112,27 +148,57 @@
 					<div class="tsd-signature tsd-kind-icon">framework<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"mocha"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;mocha&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/Constants.ts#L7">Constants.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L8">Constants.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="indexurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> index<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">index<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.electronRendererPath, &quot;browser/index.html&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L13">Constants.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="modulepath" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> module<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">module<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;dirname(__dirname)</span></div>
+					<div class="tsd-signature tsd-kind-icon">module<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;__dirname</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/Constants.ts#L5">Constants.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L5">Constants.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="tddconfig" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> tdd<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">tdd<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"tdd.json"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;tdd.json&quot;</span></div>
+					<a name="noderendererpath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> node<wbr>Renderer<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">node<wbr>Renderer<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.rendererPath, &quot;node&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/Constants.ts#L8">Constants.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L12">Constants.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="rendererpath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> renderer<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">renderer<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;resolve(Constants.modulePath, &quot;renderer&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L10">Constants.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="tmpname" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> tmp<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">tmp<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"tdd-suite-"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;tdd-suite-&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L6">Constants.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +208,7 @@
 					<div class="tsd-signature tsd-kind-icon">url<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;new RegExp(&quot;(http|ftp|https|file):///?[\w-]+(\.[\w-]+)+([\w.,@?^&#x3D;%&amp;amp;:/~+#-]*[\w@?^&#x3D;%&amp;amp;/~+#-])?&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/Constants.ts#L4">Constants.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/Constants.ts#L4">Constants.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,39 +223,6 @@
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_constants_.html">"<wbr>Constants"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_options_.html">"adapters/mocha/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_renderer_.html">"adapters/mocha/<wbr>Renderer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_console_.html">"adapters/mocha/console"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_index_.html">"adapters/mocha/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_mocha_.html">"adapters/mocha/mocha"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_application_.html">"app/<wbr>Application"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_controller_.html">"app/<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_options_.html">"app/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_argsparser_.html">"util/<wbr>Args<wbr>Parser"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_browser_.html">"util/<wbr>Browser"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -203,13 +236,31 @@
 								<a href="_constants_.constants.html#adapterpath" class="tsd-kind-icon">adapter<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#backendrenderer" class="tsd-kind-icon">backend<wbr>Renderer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#electronrendererpath" class="tsd-kind-icon">electron<wbr>Renderer<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_constants_.constants.html#framework" class="tsd-kind-icon">framework</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#indexurl" class="tsd-kind-icon">index<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_constants_.constants.html#modulepath" class="tsd-kind-icon">module<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="_constants_.constants.html#tddconfig" class="tsd-kind-icon">tdd<wbr>Config</a>
+								<a href="_constants_.constants.html#noderendererpath" class="tsd-kind-icon">node<wbr>Renderer<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#rendererpath" class="tsd-kind-icon">renderer<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="_constants_.constants.html#tmpname" class="tsd-kind-icon">tmp<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_constants_.constants.html#urlpattern" class="tsd-kind-icon">url<wbr>Pattern</a>

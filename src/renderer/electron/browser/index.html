@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+
+        //let RendererImport = require("./Renderer");
+        //const Renderer = RendererImport.Renderer;
+        const browser = require('electron').remote;
+        const Client = require("./Client").default;
+        //console.log(Renderer.getQueryParams(window.location.href));
+        let client = new Client(browser.getCurrentWindow().options);
+        window.onload = () => {
+            client.getAdapter().onReady();
+        }
+
+    </script>
+</head>
+<body>
+<!--
+  Electron-Mocha Renderer Tests
+  Your renderer tests will run in this window (only visible
+  in debug/interactive mode).
+  In interactive mode, reload the window to re-run your tests!
+-->
+</body>
+</html>

@@ -5,32 +5,39 @@
   "main": "lib/index.js",
   "typings": "lib/index",
   "scripts": {
-    "start": "./bin/tdd-suite --module-list deneme,demem2,demeene --opts mocha.opts --help",
+    "start": "./bin/tdd-suite --tdd-config tdd.json --opts mocha.opts",
     "test:debug": "node --debug-brk ./node_modules/mocha/bin/mocha --opts mocha.opts",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha --opts mocha.opts",
     "coverage": "nyc report --reporter=lcov",
-    "build": "rimraf ./lib && tsc",
+    "build": "node tools/command/build",
+    "sync": "grunt sync-dev",
     "docs": "rimraf ./docs && typedoc --module commonjs --target ES5 --name tdd-suite --readme ./README.md  --exclude **/*.spec.ts --out ./docs ./src && node node_modules/shx/lib/cli.js touch ./docs/.nojekyll"
   },
   "author": "kamilbukum@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "3.4.35",
+    "@types/electron": "^1.4.35",
+    "@types/es6-promise": "0.0.32",
     "@types/mocha": "2.2.40",
     "@types/node": "7.0.8",
     "chai": "3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sync": "^0.6.2",
     "mocha": "3.2.0",
     "nyc": "10.1.2",
     "rimraf": "2.6.1",
     "shx": "0.2.2",
     "ts-node": "2.1.0",
     "typedoc": "0.5.7",
-    "typescript": "2.2.1"
+    "typescript": "2.2.1",
+    "wasabi-common": "1.0.10"
   },
   "dependencies": {
-    "command-helper": "1.0.9",
-    "electron": "^1.6.2",
-    "wasabi-common": "1.0.6"
+    "@reactivex/rxjs": "^5.3.0",
+    "command-helper": "1.0.11",
+    "electron": "^1.6.2"
   },
   "repository": {
     "type": "git",

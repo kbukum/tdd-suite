@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Browser | tdd-suite</title>
+	<title>Client | tdd-suite</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_util_browser_.html">&quot;util/Browser&quot;</a>
+					<a href="../modules/_renderer_electron_browser_client_.html">&quot;renderer/electron/browser/Client&quot;</a>
 				</li>
 				<li>
-					<a href="_util_browser_.browser.html">Browser</a>
+					<a href="_renderer_electron_browser_client_.client.html">Client</a>
 				</li>
 			</ul>
-			<h1>Class Browser</h1>
+			<h1>Class Client</h1>
 		</div>
 	</div>
 </header>
@@ -73,19 +73,13 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">PropsClass</span>
+						<span class="tsd-signature-type">Class</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Browser</span>
+								<span class="target">Client</span>
 							</li>
 						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">IPropClass</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -95,28 +89,21 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_util_browser_.browser.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_renderer_electron_browser_client_.client.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_util_browser_.browser.html#mainwindow" class="tsd-kind-icon">main<wbr>Window</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_util_browser_.browser.html#props" class="tsd-kind-icon">props</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_renderer_electron_browser_client_.client.html#adapter" class="tsd-kind-icon">adapter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_renderer_electron_browser_client_.client.html#props" class="tsd-kind-icon">props</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_util_browser_.browser.html#getmainwindow" class="tsd-kind-icon">get<wbr>Main<wbr>Window</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_util_browser_.browser.html#openbrowser" class="tsd-kind-icon">open<wbr>Browser</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_util_browser_.browser.html#bindall" class="tsd-kind-icon">bind<wbr>All</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Object literals</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="_util_browser_.browser.html#defaultprops" class="tsd-kind-icon">default<wbr>Props</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_renderer_electron_browser_client_.client.html#getadapter" class="tsd-kind-icon">get<wbr>Adapter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_renderer_electron_browser_client_.client.html#bindall" class="tsd-kind-icon">bind<wbr>All</a></li>
 							</ul>
 						</section>
 					</div>
@@ -128,47 +115,46 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Browser<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><a href="../interfaces/_util_browser_.browserprops.html" class="tsd-signature-type">BrowserProps</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_util_browser_.browser.html" class="tsd-signature-type">Browser</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><a href="../interfaces/_renderer_electron_browser_client_.clientprops.html" class="tsd-signature-type">ClientProps</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_renderer_electron_browser_client_.client.html" class="tsd-signature-type">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides PropsClass.__constructor</p>
+								<p>Overrides Class.__constructor</p>
 								<ul>
-									<li>Defined in util/Browser.ts:28</li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/browser/Client.ts#L11">renderer/electron/browser/Client.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>props: <a href="../interfaces/_util_browser_.browserprops.html" class="tsd-signature-type">BrowserProps</a></h5>
+									<h5>props: <a href="../interfaces/_renderer_electron_browser_client_.clientprops.html" class="tsd-signature-type">ClientProps</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_util_browser_.browser.html" class="tsd-signature-type">Browser</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_renderer_electron_browser_client_.client.html" class="tsd-signature-type">Client</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="mainwindow" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> main<wbr>Window</h3>
-					<div class="tsd-signature tsd-kind-icon">main<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="adapter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> adapter</h3>
+					<div class="tsd-signature tsd-kind-icon">adapter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in util/Browser.ts:28</li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/browser/Client.ts#L11">renderer/electron/browser/Client.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="props" class="tsd-anchor"></a>
-					<h3>props</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> props</h3>
 					<div class="tsd-signature tsd-kind-icon">props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
-						<p>Overrides PropsClass.props</p>
 						<ul>
-							<li>Defined in util/Browser.ts:21</li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/browser/Client.ts#L10">renderer/electron/browser/Client.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,36 +162,19 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getmainwindow" class="tsd-anchor"></a>
-					<h3>get<wbr>Main<wbr>Window</h3>
+					<a name="getadapter" class="tsd-anchor"></a>
+					<h3>get<wbr>Adapter</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Main<wbr>Window<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Adapter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in util/Browser.ts:48</li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/renderer/electron/browser/Client.ts#L21">renderer/electron/browser/Client.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="openbrowser" class="tsd-anchor"></a>
-					<h3>open<wbr>Browser</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">open<wbr>Browser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Browser.ts:32</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -242,49 +211,6 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
-					<a name="defaultprops" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Props</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in util/Browser.ts:22</li>
-						</ul>
-					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
-						<a name="defaultprops.url" class="tsd-anchor"></a>
-						<h3>url</h3>
-						<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in util/Browser.ts:23</li>
-							</ul>
-						</aside>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultprops.url.protocol" class="tsd-anchor"></a>
-							<h3>protocol</h3>
-							<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;file&quot;</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Browser.ts:24</li>
-								</ul>
-							</aside>
-						</section>
-						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-							<a name="defaultprops.url.slashes" class="tsd-anchor"></a>
-							<h3>slashes</h3>
-							<div class="tsd-signature tsd-kind-icon">slashes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in util/Browser.ts:25</li>
-								</ul>
-							</aside>
-						</section>
-					</section>
-				</section>
-			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -292,41 +218,8 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_constants_.html">"<wbr>Constants"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_options_.html">"adapters/mocha/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_renderer_.html">"adapters/mocha/<wbr>Renderer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_console_.html">"adapters/mocha/console"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_index_.html">"adapters/mocha/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_mocha_.html">"adapters/mocha/mocha"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_application_.html">"app/<wbr>Application"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_controller_.html">"app/<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_options_.html">"app/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_argsparser_.html">"util/<wbr>Args<wbr>Parser"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_util_browser_.html">"util/<wbr>Browser"</a>
+						<a href="../modules/_renderer_electron_browser_client_.html">"renderer/electron/browser/<wbr>Client"</a>
 					</li>
 				</ul>
 			</nav>
@@ -335,47 +228,32 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_util_browser_.browser.html" class="tsd-kind-icon">Browser</a>
+						<a href="_renderer_electron_browser_client_.client.html" class="tsd-kind-icon">Client</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="_util_browser_.browser.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_renderer_electron_browser_client_.client.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_util_browser_.browser.html#mainwindow" class="tsd-kind-icon">main<wbr>Window</a>
+								<a href="_renderer_electron_browser_client_.client.html#adapter" class="tsd-kind-icon">adapter</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="_util_browser_.browser.html#props" class="tsd-kind-icon">props</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_util_browser_.browser.html#getmainwindow" class="tsd-kind-icon">get<wbr>Main<wbr>Window</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_renderer_electron_browser_client_.client.html#props" class="tsd-kind-icon">props</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_util_browser_.browser.html#openbrowser" class="tsd-kind-icon">open<wbr>Browser</a>
+								<a href="_renderer_electron_browser_client_.client.html#getadapter" class="tsd-kind-icon">get<wbr>Adapter</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_util_browser_.browser.html#bindall" class="tsd-kind-icon">bind<wbr>All</a>
-							</li>
-							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
-								<a href="_util_browser_.browser.html#defaultprops" class="tsd-kind-icon">default<wbr>Props</a>
+								<a href="_renderer_electron_browser_client_.client.html#bindall" class="tsd-kind-icon">bind<wbr>All</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_util_browser_.browserprops.html" class="tsd-kind-icon">Browser<wbr>Props</a>
+						<a href="../interfaces/_renderer_electron_browser_client_.clientprops.html" class="tsd-kind-icon">Client<wbr>Props</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#browserwindow" class="tsd-kind-icon">Browser<wbr>Window</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#app" class="tsd-kind-icon">app</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#electron" class="tsd-kind-icon">electron</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_util_browser_.html#ipcmain" class="tsd-kind-icon">ipc<wbr>Main</a>
+						<a href="../modules/_renderer_electron_browser_client_.html#ipcrenderer" class="tsd-kind-icon">ipc<wbr>Renderer</a>
 					</li>
 				</ul>
 			</nav>

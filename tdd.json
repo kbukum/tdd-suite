@@ -1,0 +1,9 @@
+{
+  "renderer": false,
+  "interactive": false,
+  "rootDirs": [
+    "src"
+  ],
+  "baseUrl": "./",
+  "framework": "mocha"
+}

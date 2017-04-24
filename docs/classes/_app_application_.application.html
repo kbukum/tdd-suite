@@ -101,19 +101,18 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_application_.application.html#browser" class="tsd-kind-icon">browser</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_application_.application.html#controller" class="tsd-kind-icon">controller</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_app_application_.application.html#props" class="tsd-kind-icon">props</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_application_.application.html#tmpdir" class="tsd-kind-icon">tmp<wbr>Dir</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_app_application_.application.html#defaultprops" class="tsd-kind-icon">default<wbr>Props</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onclosed" class="tsd-kind-icon">on<wbr>Closed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#oncompleted" class="tsd-kind-icon">on<wbr>Completed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onerror" class="tsd-kind-icon">on<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onfinished" class="tsd-kind-icon">on<wbr>Finished</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onquit" class="tsd-kind-icon">on<wbr>Quit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onready" class="tsd-kind-icon">on<wbr>Ready</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#onstart" class="tsd-kind-icon">on<wbr>Start</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_application_.application.html#run" class="tsd-kind-icon">run</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_app_application_.application.html#bindall" class="tsd-kind-icon">bind<wbr>All</a></li>
 							</ul>
@@ -134,7 +133,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides PropsClass.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L20">app/Application.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L13">app/Application.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -150,26 +149,6 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="browser" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> browser</h3>
-					<div class="tsd-signature tsd-kind-icon">browser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L20">app/Application.ts:20</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="controller" class="tsd-anchor"></a>
-					<h3>controller</h3>
-					<div class="tsd-signature tsd-kind-icon">controller<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_app_controller_.controller.html" class="tsd-signature-type">Controller</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L17">app/Application.ts:17</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="props" class="tsd-anchor"></a>
 					<h3>props</h3>
@@ -181,23 +160,13 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="tmpdir" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> tmp<wbr>Dir</h3>
-					<div class="tsd-signature tsd-kind-icon">tmp<wbr>Dir<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L16">app/Application.ts:16</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
 					<a name="defaultprops" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Props</h3>
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L18">app/Application.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L11">app/Application.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -210,16 +179,56 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="onclosed" class="tsd-anchor"></a>
-					<h3>on<wbr>Closed</h3>
+					<a name="oncompleted" class="tsd-anchor"></a>
+					<h3>on<wbr>Completed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Closed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Completed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L47">app/Application.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L44">app/Application.ts:44</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onerror" class="tsd-anchor"></a>
+					<h3>on<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Error<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L32">app/Application.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>err: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onfinished" class="tsd-anchor"></a>
+					<h3>on<wbr>Finished</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Finished<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L40">app/Application.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -236,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L52">app/Application.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L50">app/Application.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -244,16 +253,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="onready" class="tsd-anchor"></a>
-					<h3>on<wbr>Ready</h3>
+					<a name="onstart" class="tsd-anchor"></a>
+					<h3>on<wbr>Start</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Ready<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L56">app/Application.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L36">app/Application.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -270,7 +279,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/19090ce/src/app/Application.ts#L39">app/Application.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/wasabi-io/tdd-suite/blob/0153ffa/src/app/Application.ts#L18">app/Application.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -317,41 +326,8 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_constants_.html">"<wbr>Constants"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_options_.html">"adapters/mocha/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_renderer_.html">"adapters/mocha/<wbr>Renderer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_console_.html">"adapters/mocha/console"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_index_.html">"adapters/mocha/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_adapters_mocha_mocha_.html">"adapters/mocha/mocha"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_app_application_.html">"app/<wbr>Application"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_controller_.html">"app/<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_app_options_.html">"app/<wbr>Options"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_argsparser_.html">"util/<wbr>Args<wbr>Parser"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_util_browser_.html">"util/<wbr>Browser"</a>
 					</li>
 				</ul>
 			</nav>
@@ -365,29 +341,26 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_app_application_.application.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_app_application_.application.html#browser" class="tsd-kind-icon">browser</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_app_application_.application.html#controller" class="tsd-kind-icon">controller</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_app_application_.application.html#props" class="tsd-kind-icon">props</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_app_application_.application.html#tmpdir" class="tsd-kind-icon">tmp<wbr>Dir</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
 								<a href="_app_application_.application.html#defaultprops" class="tsd-kind-icon">default<wbr>Props</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_app_application_.application.html#onclosed" class="tsd-kind-icon">on<wbr>Closed</a>
+								<a href="_app_application_.application.html#oncompleted" class="tsd-kind-icon">on<wbr>Completed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_application_.application.html#onerror" class="tsd-kind-icon">on<wbr>Error</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_application_.application.html#onfinished" class="tsd-kind-icon">on<wbr>Finished</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_app_application_.application.html#onquit" class="tsd-kind-icon">on<wbr>Quit</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_app_application_.application.html#onready" class="tsd-kind-icon">on<wbr>Ready</a>
+								<a href="_app_application_.application.html#onstart" class="tsd-kind-icon">on<wbr>Start</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_app_application_.application.html#run" class="tsd-kind-icon">run</a>
@@ -401,12 +374,6 @@
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_app_application_.applicationprops.html" class="tsd-kind-icon">Application<wbr>Props</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_app_application_.html#app" class="tsd-kind-icon">app</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_app_application_.html#electron" class="tsd-kind-icon">electron</a>
 					</li>
 				</ul>
 			</nav>

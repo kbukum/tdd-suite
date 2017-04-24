@@ -42,17 +42,8 @@ const config = [
     ["--require-main <name>", "load the given script in main process before executing tests", modules, []]
 ];
 
-export interface OptionsProps {
-    baseUrl: string,
-    controllerPath: string,
-    framework: string
-}
-
 export default class Options {
-    static parse(args: string[]): OptionsProps {
-        let props = {
-            options: {}
-        };
+    static parse(args: string[]): any {
         let options = ArgsParser.parse(
             packageJson.name,
             packageJson.version,

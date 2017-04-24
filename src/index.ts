@@ -1,10 +1,15 @@
 import Options from "./app/Options";
 import Application from "./app/Application";
+// import Application from "./app/Application";
 
-let args: string[] = process.argv.slice(2);
-let options = Options.parse(args);
+let options = Options.parse(process.argv);
+let app = new Application({
+    options: options
+});
+app.run();
+/*
 let application = new Application({
-    options,
-    args
+    options
 });
 application.run();
+*/

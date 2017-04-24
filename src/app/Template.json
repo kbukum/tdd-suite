@@ -1,0 +1,50 @@
+{
+  "commands": {
+    "--renderer": "renderer",
+    "--interactive": "interactive",
+    "--tdd-config": "tddConfig",
+    "--root-dirs": "rootDirs",
+    "--expose_debug_as": "exposeDebugAs",
+    "--remote-debugging-port": "remoteDebuggingPort"
+  },
+  "options": {
+    "renderer": {
+      "reader": "Boolean",
+      "defaultValue": false
+    },
+    "interactive": {
+      "reader": "Boolean",
+      "defaultValue": false
+    },
+    "tddConfig": {
+      "reader": "JsonFile",
+      "description": "tdd configuration file",
+      "defaultValue": {}
+    },
+    "rootDirs": {
+      "reader": "Array",
+      "defaultValue": [],
+      "description": "define modules roots"
+    },
+    "baseUrl": {
+      "reader": "String",
+      "description": "define modules roots"
+    },
+    "controllerPath": {
+      "reader": "String",
+      "description": "controller path absoulte or relative"
+    },
+    "framework": {
+      "reader": "String",
+      "description": "which tdd framework will use"
+    },
+    "exposeDebugAs": {
+      "reader": "String",
+      "description": "debug parameters"
+    },
+    "remoteDebuggingPort": {
+      "reader": "String",
+      "description": "debug parameters"
+    }
+  }
+}

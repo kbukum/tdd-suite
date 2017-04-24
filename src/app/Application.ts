@@ -1,59 +1,53 @@
-import * as fs from "fs-extra";
-import { join } from "path";
-import { requireEs6 } from "wasabi-common";
 import PropsClass from "wasabi-common/lib/lang/PropClass";
-import {Controller, ControllerClass} from "./Controller";
 import {OptionsProps} from "./Options";
-const electron = require("electron");
-const { app } = electron;
+import RendererFactory from "../renderer/RendererFactory";
+import Constrants from "../Constants";
 
 export interface ApplicationProps {
-    options: OptionsProps,
-    args: string[]
+    options: OptionsProps
 }
 
 export default class Application extends PropsClass {
-    private tmpDir;
-    controller: Controller;
-    static defaultProps = {
+    public static defaultProps = {
+
     };
-    private browser;
-    /*
-     *
-     * @param props
-     */
     public constructor(props: ApplicationProps){
-        super(props);
-        let Controller: ControllerClass = requireEs6(props.options.controllerPath);
-        let { options, args } = this.props;
-        this.controller = new Controller({
-            options,
-            args,
-            quit: app.quit
+        super(props)
+    }
+
+    public run(){
+        let adapter = RendererFactory.createRenderer({
+            tmpName: Constrants.tmpName,
+            options: this.props.options
+        });
+        adapter.run({
+            error: this.onError,
+            start: this.onStart,
+            finished: this.onFinished,
+            completed: this.onCompleted,
+            quit: this.onQuit
         });
     }
 
-    /**
-     *
-     */
-    public run(){
-        this.tmpDir = fs.mkdtempSync(join(app.getPath("temp"), "tdd-suite-"));
-        app.setPath("userData", this.tmpDir);
-        app.on("window-all-closed", this.onClosed);
-        app.on("quit", this.onQuit);
-        app.on("ready", this.onReady);
-    }
-
-    onClosed() {
-        // do not quit if tests open and close windows
+    public onError(err){
 
     }
 
-    onQuit(){
-        fs.removeSync(this.tmpDir);
+    public onStart(){
+        console.log("onStarted...");
     }
 
-    onReady(){
+    public onFinished(){
+        console.log("onFinished...")
+    }
 
+    public onCompleted(){
+        if(!this.props.options.interactive) {
+           this.onQuit();
+        }
+    }
+
+    public onQuit(){
+        process.exit(0);
     }
 }
