@@ -1,6 +1,6 @@
 {
-  "renderer": false,
-  "interactive": false,
+  "renderer": true,
+  "interactive": true,
   "rootDirs": [
     "src"
   ],

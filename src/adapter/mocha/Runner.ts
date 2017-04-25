@@ -1,7 +1,6 @@
 import Class from "wasabi-common/lib/lang/Class";
 const Mocha = require("mocha");
 const { join, resolve } = require("path");
-const {ipcRenderer } = require('electron');
 import Options from "./Options";
 
 export default class Runner extends Class {
@@ -11,6 +10,12 @@ export default class Runner extends Class {
         super();
         this.props = props;
     }
+
+    /**
+     *
+     * @param options
+     * @return {any}
+     */
     static configureOptions(options){
         const getOptions = require('mocha/bin/options');
         getOptions();
@@ -22,7 +27,11 @@ export default class Runner extends Class {
         return args;
     }
 
-    run(callback){
+    /**
+     *
+     * @param callback
+     */
+    public run(callback){
         let args = this.props.options;
         const utils = Mocha.utils;
         const mocha = new Mocha();
@@ -67,13 +76,5 @@ export default class Runner extends Class {
         mocha.asyncOnly = false;
         mocha.files = files;
         mocha.run(callback);
-    }
-
-    static complete(){
-        ipcRenderer.send("onCompleted", 0);
-    }
-
-    static error(error){
-        ipcRenderer.send("onError", error);
     }
 }
